@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    {% include 'header.html' %}
+  <div class="add-cafe">
+    <h1>Add Your Cafe</h1>
+    <img class="header-img" src="/static/img/coffee_header.png" alt="....">
+      <form class="add-form" method="POST" action="{{ url_for('add_cafe') }}" novalidate>
+          {{ form.csrf_token }}
+          <p>
+               {{ form.name.label }} <br> {{ form.name(size=30) }}
+          </p>
+          <p>
+               {{ form.map.label }}
+              <br>
+              {{ form.map(size=100) }}
+          </p>
+          <p>
+              {{ form.img.label }}
+              <br>
+              {{ form.img(size=100) }}
+          </p>
+          <p>
+              {{ form.loc.label }}
+              <br>
+              {{ form.loc(size=100) }}
+          </p>
+          <p>
+              {{ form.seats.label }}
+              <br>
+              {{ form.seats(size=100) }}
+          </p>
+          <p>
+            {{ form.toilet(size=100) }} {{ form.toilet.label }}
+          </p>
+          <p>
+            {{ form.wifi(size=100) }}  {{ form.wifi.label }}
+          </p>
+          <p>
+            {{ form.sockets(size=100) }} {{ form.sockets.label }}
+          </p>
+          <p>
+            {{ form.calls(size=100) }} {{ form.calls.label }}
+          </p>
+          <p>
+              {{ form.price.label }}
+              <br>
+              {{ form.price(size=100) }}
+          </p>
+          
+          {{ form.submit }}
+      </form>
+  </div>
+</body>
+</html>

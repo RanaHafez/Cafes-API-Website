@@ -1,0 +1,68 @@
+<html>
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    {% include 'header.html' %}
+    <div class="cafe-info-container">
+        <img class="cafe-img" src="{{ cafe.img_url }}"> 
+        <div class="cafe-info">
+            <h1>
+                {{ cafe.name }}
+            </h1>
+            <h3> Their coffee price starts with {{ cafe.coffee_price }}</h3> 
+            {% if cafe.has_toilet: %}
+                <h3>
+                    Does it have toilet? Yes
+                </h3>
+            {% else %}
+                <h3>
+                    Does it have toilet? No
+                </h3>
+            {% endif %}
+            {% if cafe.has_sockets: %}
+            <h3>
+                Does it have sockets? Yes.
+            </h3>
+            {% else %}
+                    <h3>
+                        Does it have sockets? No.
+                    </h3>
+            {% endif %}
+            {% if cafe.has_wifi: %}
+               <h3>
+                   Does it have wifi? Yes.
+               </h3>
+            {% else %}
+                <h3>
+                    Does it have wifi? No
+                </h3>
+            {% endif %}
+            {% if cafe.can_take_calls: %}
+               <h3>
+                   Can I take calls? Yes.
+               </h3>
+            {% else %}
+                <h3>
+                    Can I take calls? No.
+                </h3>
+            {% endif %}
+
+            <h3>The number of seats {{ cafe.seats }}</h3>
+            <a href="{{ cafe.map_url }}" class="cafe-btn btn btn-light">Go Google Maps</a>
+            <a href="{{ url_for('update_call', id=cafe.id) }}" class="cafe-btn btn btn-light">Update Price</a>
+            <a href="{{ url_for('delete', id=cafe.id) }}" class="cafe-btn btn btn-light">Delete Cafe</a>
+        </div>
+    </div>
+    
+<!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script> -->
+</body>
+</html>
+</html>

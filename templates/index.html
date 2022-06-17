@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    {% include 'header.html' %}
+    <div class="header-container">
+        <h1>Welcome to the Cafe & Wifi API</h1>
+        <img class="header-img" src="/static/img/coffee_header.png" alt="....">
+        <p>Search The Cafe By Location</p>
+        <form action="{{ url_for('get_cafes') }}" method="post">
+            <input type="text" name="loc" id="loc" placeholder="loc">
+            <!-- <button type="submit">Ok</button> -->
+            <button type="button submit" class="find-cafe-btn btn btn-secondary">Find Cafe</button>
+        </form>
+    </div>
+    
+    <div class="add-container">
+        <i class="add-icon fa-solid fa-plus fa-3x"></i><a href="{{ url_for('add_cafe') }}"> Add Cafe</a>
+        <p>You can add your own cafe</p>
+    </div>
+
+    <div class="cafes-container">
+        <h1>Cafes and Coffee</h1>
+        <div class="container">
+            <div class="row">
+                {% for cafe in cafes %}
+                   <div class="cafe-card col-lg-3">
+                    <div class="card col-lg-2" style="width: 18rem;">
+                        <img src="{{ cafe.img_url }}" class="card-img-top" alt="...">
+                      <div class="card-body">
+                          <a class="cafe-title" href="{{ url_for('get_cafe', id=cafe.id) }}"><h5 class="card-title">{{ cafe.name }}</h5></a>
+                          <p class="card-text">it resides in {{ cafe.location }}. The coffee there costs {{ cafe.coffee_price }}</p>
+                          <a href="{{ cafe.map_url }}" class="card-btn btn btn-light">Go Google Maps</a>
+                        </div>
+                      </div>
+                   </div>
+                {% endfor %}
+            </div>
+        </div>
+        
+    </div>
+    
+
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    {% include 'header.html' %}
+    <div class="update-form-container"> 
+        <h1>Update Price</h1>
+        <img class="header-img" src="/static/img/coffee_header.png" alt="....">
+        <form method="POST" action=" {{ url_for('update_call', id=id) }}" novalidate>
+            {{ form.csrf_token }}
+            <p>
+                {{ form.new_price.label }}
+                <br>
+                   {{ form.new_price(size=50) }}
+            </p>
+     
+            {{ form.submit }}
+        </form>
+    </div>
+</body>
+</html>

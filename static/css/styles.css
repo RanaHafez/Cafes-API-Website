@@ -1,0 +1,134 @@
+.header-container {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    text-align: center;
+    background-color: #F8ECD1;
+}
+
+h1 {
+    font-family: 'Lobster', cursive;
+    font-weight: bold;
+    color: #85586F;
+    font-size: 50px;
+}
+h3 {
+    color: #886F6F;
+}
+.header-img{
+    height: 150px;
+    width: 150px;
+}
+
+.find-cafe-btn {
+    background-color: #AC7D88;
+}
+
+
+/* Add Container  */
+.add-container {
+    text-align: center;
+    margin: 100px;
+}
+.add-container a{
+    text-decoration: none;
+    font-size: 50px;
+    color: #AC7D88;
+}
+.add-container a:hover{
+    color: #DEB6AB
+}
+.add-icon{
+    color: #85586F;
+}
+.add-icon:hover {
+    color: #DEB6AB;
+}
+
+
+/*Cafes Cards*/
+.cafes-container{
+    text-align: center;
+    background-color: #EBD8C3;
+    padding-top: 100px;
+}
+.cafe-card {
+    margin: 60px 20px 30px 60px;
+}
+.card {
+    background-color: #AC7D88;
+}
+.card .cafe-title{
+    text-decoration: none;
+    color: #EBD8C3;
+}
+.cafe-title:hover {
+    color: #F4BFBF;
+}
+.card-text {
+    color: #FDEFEF;
+}
+.card-img-top{
+    height: 250px;
+    width: 285px;
+}
+
+/* View Cafe  */
+.cafe-img{
+    height: 400px;
+    width: 400px;
+    border-radius: 25%;
+}
+
+.cafe-info-container{
+    background-color: #FFFBE9;
+    padding: 100px 50px 100px 50px;
+    position: relative;
+}
+.cafe-info {
+    position: absolute;
+    left: 480px;
+    top: 130px;
+}
+.cafe-btn {
+    background-color: #85586F;
+    color: #FDEFEF;
+}
+
+.update-form-container {
+    padding: 100px;
+    text-align: center;
+}
+
+/* Add Cafe  */
+.add-cafe {
+    padding: 100px;
+    background-color: #F8ECD1;
+}
+.add-cafe p {
+    color: #AC7D88;
+}
+/* .add-cafe {
+    background-color: ;
+} */
+
+
+#submit{
+    font-size:24px;
+    font-family:Arial;
+    width:200px;
+    height:50px;
+    border-width:0px;
+    color:#fff;
+    border-color:#ffffff;
+    border-top-left-radius:7px;
+    border-top-right-radius:7px;
+    border-bottom-left-radius:7px;
+    border-bottom-right-radius:7px;
+    box-shadow:inset 0px -12px 0px -24px #e67a73;
+    text-shadow:inset 0px 1px 0px #b23e35;
+    background: #C1A3A3;
+}
+
+  #submit:hover {
+    background: #886F6F;
+}
